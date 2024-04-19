@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Plataforma Chuva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto desenvolvido com base em um design do Figma para a empresa Chuva.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- DaisyUI
 
-## Expanding the ESLint configuration
+## Como Rodar o Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Para rodar o projeto localmente, siga estas etapas:
 
-- Configure the top-level `parserOptions` property like this:
+1. Certifique-se de ter o Node.js instalado em seu sistema. Você pode fazer o download e instalá-lo [aqui](https://nodejs.org/).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Instale as dependências do Tailwind CSS, PostCSS e Autoprefixer executando o seguinte comando no terminal:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   ```
+
+3. Inicialize o arquivo de configuração do Tailwind CSS executando o seguinte comando:
+
+   ```bash
+   npx tailwindcss init -p
+   ```
+
+4. Instale a biblioteca DaisyUI executando o seguinte comando:
+
+   ```bash
+   npm i -D daisyui@latest
+   ```
+
+5. Instale os ícones do React executando o seguinte comando:
+
+   ```bash
+   npm install react-icons --save
+   ```
+
+6. Por fim, instale todas as dependências do projeto executando:
+
+   ```bash
+   npm install
+   ```
+
+7. Após a instalação, inicie o servidor de desenvolvimento executando:
+
+   ```bash
+   npm run dev
+   ```
+
+Isso iniciará o servidor de desenvolvimento e abrirá o projeto no seu navegador padrão.
