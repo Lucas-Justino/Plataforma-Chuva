@@ -28,25 +28,49 @@ Para rodar o projeto localmente, siga estas etapas:
    npx tailwindcss init -p
    ```
 
-4. Instale a biblioteca DaisyUI executando o seguinte comando:
+4. Depois adicione essas linhas no index.css
+
+   ```bash
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+5. Instale a biblioteca DaisyUI executando o seguinte comando:
 
    ```bash
    npm i -D daisyui@latest
    ```
 
-5. Instale os ícones do React executando o seguinte comando:
+6. Instale os ícones do React executando o seguinte comando:
 
    ```bash
    npm install react-icons --save
    ```
 
-6. Por fim, instale todas as dependências do projeto executando:
+7. Por fim, instale todas as dependências do projeto executando:
 
    ```bash
    npm install
    ```
 
-7. Após a instalação, inicie o servidor de desenvolvimento executando:
+8. Certifique que o arquvio `tailwind.config.js` esteja da seguinte forma:
+
+   ```bash
+   /** @type {import('tailwindcss').Config} */
+   export default {
+     content: [
+       "./index.html",
+       "./src/**/*.{js,ts,jsx,tsx}",
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [require("daisyui")],
+   }
+   ```
+
+9. Após a instalação, inicie o servidor de desenvolvimento executando:
 
    ```bash
    npm run dev
